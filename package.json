@@ -1,0 +1,24 @@
+{
+  "name": "jobs",
+  "version": "1.0.0",
+  "description": "A high-performance, lightweight, production-grade automated Career Crawler and Job Alert System written in Rust.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scrape": "node scripts/naukri_scraper.js",
+    "automate": "node scripts/auto_scheduler.js",
+    "list": "cargo run -- list-jobs --limit 10",
+    "stats": "cargo run -- stats"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "playwright": "^1.63.0",
+    "sqlite3": "^6.0.1"
+  }
+}

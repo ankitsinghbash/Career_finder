@@ -1,0 +1,502 @@
+[general]
+min_match_score = 60.0
+poll_interval_secs = 900
+poll_jitter_secs = 180
+dry_run = false
+user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+
+[profile]
+target_roles = [
+    "Full Stack Developer",
+    "Full Stack Engineer",
+    "Software Developer",
+    "Software Engineer",
+    "Backend Developer",
+    "Backend Engineer",
+    "Frontend Developer",
+    "Frontend Engineer",
+    "SDE",
+    "SDE-1",
+    "SDE I",
+    "SDE-2",
+    "SDE II",
+    "Node.js Developer",
+    "React Developer",
+    "Next.js Developer",
+    "MERN Stack Developer",
+    "TypeScript Developer",
+    "Associate Software Engineer",
+    "Web Developer"
+]
+
+negative_roles = [
+    "Staff",
+    "Principal",
+    "Director",
+    "VP",
+    "Vice President",
+    "Manager",
+    "Head",
+    "Architect",
+    "DevOps Lead",
+    "Sales",
+    "HR",
+    "Recruiter",
+    "Marketing",
+    "Finance",
+    "Flutter",
+    "iOS Developer",
+    "Android Developer",
+    "Java",
+    "Python",
+    "Django",
+    "Flask",
+    "Spring",
+    "Angular",
+    ".NET",
+    "PHP",
+    "Ruby",
+    "Golang"
+]
+
+min_experience_years = 1
+max_experience_years = 3
+
+[profile.skills]
+"Next.js" = 3.5
+"React" = 3.5
+"Node.js" = 3.5
+"TypeScript" = 3.5
+"JavaScript" = 2.5
+"MongoDB" = 3.0
+"PostgreSQL" = 3.0
+"Redis" = 3.0
+"RabbitMQ" = 2.5
+"Socket.IO" = 2.5
+"WebSockets" = 2.0
+"Docker" = 2.5
+"AWS" = 2.5
+"Microservices" = 3.0
+"System Design" = 2.5
+"Tailwind" = 2.5
+"Redux" = 2.5
+"Express" = 2.5
+"REST APIs" = 2.0
+"C++" = 2.0
+"DSA" = 2.5
+"Data Structures" = 2.0
+"Cashfree" = 2.0
+"Razorpay" = 2.0
+"Event-Driven" = 2.0
+"NGINX" = 1.5
+"SQL" = 2.0
+"Git" = 1.5
+
+# ---------------------------------------------------------------------------
+# 1. NAUKRI.COM SEARCH SOURCES (Targeted to Ankit's 2.1 Yrs Stack)
+# ---------------------------------------------------------------------------
+[[sources.naukri]]
+query = "Full Stack Developer Node.js React"
+experience_years = 2
+location = "Delhi NCR"
+enabled = true
+
+[[sources.naukri]]
+query = "Next.js React TypeScript Developer"
+experience_years = 2
+location = "Gurugram"
+enabled = true
+
+[[sources.naukri]]
+query = "Backend Developer Node.js PostgreSQL Redis"
+experience_years = 2
+location = "Noida"
+enabled = true
+
+[[sources.naukri]]
+query = "SDE 1 Full Stack Developer"
+experience_years = 2
+location = "Bengaluru"
+enabled = true
+
+[[sources.naukri]]
+query = "Software Engineer Node.js React"
+experience_years = 2
+location = "Remote"
+enabled = true
+
+# ---------------------------------------------------------------------------
+# 2. GREENHOUSE ATS BOARDS (Top 50+ Global & Indian Tech Giants)
+# ---------------------------------------------------------------------------
+[[sources.greenhouse]]
+company = "Figma"
+board_token = "figma"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Stripe"
+board_token = "stripe"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Cloudflare"
+board_token = "cloudflare"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Airtable"
+board_token = "airtable"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Vercel"
+board_token = "vercel"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Datadog"
+board_token = "datadog"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Discord"
+board_token = "discord"
+enabled = true
+
+[[sources.greenhouse]]
+company = "HashiCorp"
+board_token = "hashicorp"
+enabled = true
+
+[[sources.greenhouse]]
+company = "MongoDB"
+board_token = "mongodb"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Twilio"
+board_token = "twilio"
+enabled = true
+
+[[sources.greenhouse]]
+company = "DoorDash"
+board_token = "doordash"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Instacart"
+board_token = "instacart"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Coinbase"
+board_token = "coinbase"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Reddit"
+board_token = "reddit"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Roblox"
+board_token = "roblox"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Pinterest"
+board_token = "pinterest"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Dropbox"
+board_token = "dropbox"
+enabled = true
+
+[[sources.greenhouse]]
+company = "GitLab"
+board_token = "gitlab"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Supabase"
+board_token = "supabase"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Docker"
+board_token = "docker"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Snyk"
+board_token = "snyk"
+enabled = true
+
+[[sources.greenhouse]]
+company = "ScaleAI"
+board_token = "scaleai"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Ramp"
+board_token = "ramp"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Retool"
+board_token = "retool"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Brex"
+board_token = "brex"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Gusto"
+board_token = "gusto"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Notion"
+board_token = "notion"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Canva"
+board_token = "canva"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Robinhood"
+board_token = "robinhood"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Affirm"
+board_token = "affirm"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Klaviyo"
+board_token = "klaviyo"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Toast"
+board_token = "toast"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Okta"
+board_token = "okta"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Elastic"
+board_token = "elastic"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Confluent"
+board_token = "confluent"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Chime"
+board_token = "chime"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Plaid"
+board_token = "plaid"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Webflow"
+board_token = "webflow"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Zapier"
+board_token = "zapier"
+enabled = true
+
+[[sources.greenhouse]]
+company = "Automattic"
+board_token = "automattic"
+enabled = true
+
+# ---------------------------------------------------------------------------
+# 3. LEVER ATS BOARDS (Top 30+ Tech Leaders & Scaleups)
+# ---------------------------------------------------------------------------
+[[sources.lever]]
+company = "Postman"
+company_id = "postman"
+enabled = true
+
+[[sources.lever]]
+company = "Palantir"
+company_id = "palantir"
+enabled = true
+
+[[sources.lever]]
+company = "Spotify"
+company_id = "spotify"
+enabled = true
+
+[[sources.lever]]
+company = "Atlassian"
+company_id = "atlassian"
+enabled = true
+
+[[sources.lever]]
+company = "InVision"
+company_id = "invision"
+enabled = true
+
+[[sources.lever]]
+company = "BriteCore"
+company_id = "britecore"
+enabled = true
+
+[[sources.lever]]
+company = "Chainalysis"
+company_id = "chainalysis"
+enabled = true
+
+[[sources.lever]]
+company = "Sourcegraph"
+company_id = "sourcegraph"
+enabled = true
+
+[[sources.lever]]
+company = "CockroachLabs"
+company_id = "cockroachlabs"
+enabled = true
+
+[[sources.lever]]
+company = "HelpScout"
+company_id = "helpscout"
+enabled = true
+
+[[sources.lever]]
+company = "Branch"
+company_id = "branch"
+enabled = true
+
+[[sources.lever]]
+company = "Benchling"
+company_id = "benchling"
+enabled = true
+
+[[sources.lever]]
+company = "Outreach"
+company_id = "outreach"
+enabled = true
+
+[[sources.lever]]
+company = "Segment"
+company_id = "segment"
+enabled = true
+
+[[sources.lever]]
+company = "Udemy"
+company_id = "udemy"
+enabled = true
+
+[[sources.lever]]
+company = "Medium"
+company_id = "medium"
+enabled = true
+
+[[sources.lever]]
+company = "Eventbrite"
+company_id = "eventbrite"
+enabled = true
+
+[[sources.lever]]
+company = "SendGrid"
+company_id = "sendgrid"
+enabled = true
+
+[[sources.lever]]
+company = "Carta"
+company_id = "carta"
+enabled = true
+
+[[sources.lever]]
+company = "Checkr"
+company_id = "checkr"
+enabled = true
+
+# ---------------------------------------------------------------------------
+# 4. ENTERPRISE IT & INDIAN UNICORNS PIPELINE
+# ---------------------------------------------------------------------------
+[[sources.enterprise]]
+company = "TCS"
+portal = "ibegin"
+endpoint_url = "https://ibegin.tcs.com/iBegin/api/v1/jobs/search"
+enabled = true
+
+[[sources.enterprise]]
+company = "Infosys"
+portal = "infy_career"
+endpoint_url = "https://career.infosys.com/joblist/api/search"
+enabled = true
+
+[[sources.enterprise]]
+company = "Wipro"
+portal = "wipro_careers"
+endpoint_url = "https://careers.wipro.com/api/jobs"
+enabled = true
+
+[[sources.enterprise]]
+company = "HCLTech"
+portal = "hcl_careers"
+endpoint_url = "https://www.hcltech.com/careers/api/jobs"
+enabled = true
+
+[[sources.enterprise]]
+company = "TechMahindra"
+portal = "techm_careers"
+endpoint_url = "https://careers.techmahindra.com/api/search"
+enabled = true
+
+[[sources.enterprise]]
+company = "LTIMindtree"
+portal = "ltim_careers"
+endpoint_url = "https://www.ltimindtree.com/careers/api"
+enabled = true
+
+[[sources.enterprise]]
+company = "Cognizant"
+portal = "cognizant_careers"
+endpoint_url = "https://careers.cognizant.com/api/jobs"
+enabled = true
+
+[[sources.enterprise]]
+company = "AccentureIndia"
+portal = "accenture_in"
+endpoint_url = "https://www.accenture.com/in-en/careers/api/jobs"
+enabled = true
+
+[[sources.enterprise]]
+company = "Capgemini"
+portal = "capgemini_in"
+endpoint_url = "https://www.capgemini.com/in-en/careers/api/jobs"
+enabled = true
+
+# ---------------------------------------------------------------------------
+# 5. STARTUP ECOSYSTEM & COMMUNITY BOARDS
+# ---------------------------------------------------------------------------
+[[sources.html_scrape]]
+company = "TechStartupJobs"
+url = "https://news.ycombinator.com/jobs"
+item_selector = "tr.athing"
+title_selector = ".titleline > a"
+link_selector = ".titleline > a"
+location_selector = ".sitebit"
+enabled = true
+
