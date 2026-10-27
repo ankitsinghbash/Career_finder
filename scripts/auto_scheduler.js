@@ -45,6 +45,11 @@ function loadEnv() {
         BATCH_SIZE: 25 // Send at least 25 jobs per cycle
     };
 
+    if (process.env.TELEGRAM_BOT_TOKEN) config.TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+    if (process.env.TELEGRAM_CHAT_ID) config.TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+    if (process.env.MIN_MATCH_SCORE) config.MIN_MATCH_SCORE = parseFloat(process.env.MIN_MATCH_SCORE) || 70;
+    if (process.env.BATCH_SIZE) config.BATCH_SIZE = parseInt(process.env.BATCH_SIZE) || 25;
+
     if (fs.existsSync(envPath)) {
         const lines = fs.readFileSync(envPath, 'utf8').split('\n');
         for (const line of lines) {
@@ -329,4 +334,7 @@ async function startDaemon() {
     }
 }
 
-startDaemon().catch(console.error);
+module.exports = { loadEnv, runAutomationCycle, startDaemon };
+if (require.main === module) {
+    startDaemon().catch(console.error);
+}

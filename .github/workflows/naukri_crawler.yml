@@ -1,0 +1,46 @@
+name: Naukri Career Crawler & Telegram Alerts
+
+on:
+  schedule:
+    # Runs 4 times a day during active hiring hours: 9 AM, 1 PM, 5 PM, 9 PM IST (UTC: 3:30, 7:30, 11:30, 15:30)
+    - cron: '30 3,7,11,15 * * *'
+  workflow_dispatch: # Allows manual 1-click run anytime from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-and-alert:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout Code & Database
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install NPM Dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium Browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Execute Naukri Scraper & Dispatch Telegram Alert
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          MIN_MATCH_SCORE: '65'
+          BATCH_SIZE: '20'
+        run: node scripts/run_once.js
+
+      - name: Save Updated jobs.db Back to Repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add jobs.db
+          git diff --staged --quiet || (git commit -m "chore(db): update jobs.db scraped history [skip ci]" && git push)
